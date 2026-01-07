@@ -25,7 +25,7 @@ SynergyNet/
 ├── precompute_swivg.py # Script for offline topological map generation
 ├── requirements.txt    # Python dependencies
 └── README.md
-
+```
 ## 🛠️ Installation
 
 1.  **Clone the repository** (or download the source code):
