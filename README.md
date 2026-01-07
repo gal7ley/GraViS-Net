@@ -28,19 +28,13 @@ SynergyNet/
 ```
 ## 🛠️ Installation
 
-1.  **Clone the repository** (or download the source code):
-    ```bash
-    git clone https://anonymous.4open.science/r/SynergyNet-XXXX
-    cd SynergyNet-XXXX
-    ```
-
-2.  **Create a virtual environment** (Recommended):
+1.  **Create a virtual environment** (Recommended):
     ```bash
     conda create -n synergy python=3.8
     conda activate synergy
     ```
 
-3.  **Install dependencies:**
+2.  **Install dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
