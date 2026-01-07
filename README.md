@@ -1,4 +1,3 @@
-```markdown
 # SynergyNet: Dual-Stream Network with Topology-Awareness for Skin Lesion Diagnosis
 
 ## 📖 Introduction
@@ -26,7 +25,6 @@ SynergyNet/
 ├── precompute_swivg.py # Script for offline topological map generation
 ├── requirements.txt    # Python dependencies
 └── README.md
-```
 
 ## 🛠️ Installation
 
