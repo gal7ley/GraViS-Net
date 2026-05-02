@@ -53,7 +53,6 @@ Please download the datasets from their official sources.
     *   **Instructions:** Select Year **2019** -> Download **Training Input** and **Training Ground Truth**.
 
 *   **PAD-UFES-20 (Clinical Photographs):**
-    *   **Download Link:** [https://data.mendeley.com/datasets/rscz8dxnd2/1](https://data.mendeley.com/datasets/rscz8dxnd2/1)
     *   **Features:** Includes 2,298 images with 21 rich clinical metadata features (history, symptoms, Fitzpatrick skin type).
 
 ### 📊 Dataset Statistics
