@@ -52,6 +52,17 @@ Please download the datasets from their official sources.
     *   **Download Link:** [https://challenge.isic-archive.com/data/](https://challenge.isic-archive.com/data/)
     *   **Instructions:** Select Year **2019** -> Download **Training Input** and **Training Ground Truth**.
 
+*   **PAD-UFES-20 (Clinical Photographs):**
+    *   **Download Link:** [https://data.mendeley.com/datasets/rscz8dxnd2/1](https://data.mendeley.com/datasets/rscz8dxnd2/1)
+    *   **Features:** Includes 2,298 images with 21 rich clinical metadata features (history, symptoms, Fitzpatrick skin type).
+
+### 📊 Dataset Statistics
+| Dataset | Total Images | Classes | Imbalance Ratio | Modality |
+| :--- | :---: | :---: | :---: | :--- |
+| ISIC 2018 | 10,015 | 7 | 58.3 | Image Only |
+| ISIC 2019 | 25,331 | 8 | 53.9 | Image + Metadata |
+| PAD-UFES-20 | 2,298 | 6 | 16.3 | Image + Rich Metadata |
+
 ### 2. Offline SW-IVG Computation
 To avoid high computational overhead during training, we pre-compute the topological maps and cache them as `.npy` files.
 
