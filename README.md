@@ -1,8 +1,8 @@
-# SynergyNet: Dual-Stream Network with Topology-Awareness for Skin Lesion Diagnosis
+# GraViS-Net: Dual-Stream Network with Topology-Awareness for Skin Lesion Diagnosis
 
 ## 📖 Introduction
 
-SynergyNet is a novel dual-stream framework designed for long-tailed skin lesion classification. It integrates appearance features (RGB) with topological structural features derived from the **Sigmoid-Weighted Image Visibility Graph (SW-IVG)** to enhance diagnostic accuracy and robustness.
+GraViS-Net is a novel dual-stream framework designed for long-tailed skin lesion classification. It integrates appearance features (RGB) with topological structural features derived from the **Sigmoid-Weighted Image Visibility Graph (SW-IVG)** to enhance diagnostic accuracy and robustness.
 
 **Key Features:**
 *   **Dual-Stream Architecture:** Combines a strong ResNet50 backbone for visual details (RGB) and a lightweight ResNet18 backbone for topological structures (SW-IVG).
@@ -15,14 +15,12 @@ SynergyNet is a novel dual-stream framework designed for long-tailed skin lesion
 ## 📂 Project Structure
 
 ```text
-SynergyNet/
+GraViS-Net/
 ├── checkpoints/        # Directory for saving model weights and logs
-├── models_v5.py        # SynergyNet architecture definition (Dual-Stream + FiLM)
+├── models_v5.py        # GraViS-Net architecture definition (Dual-Stream + FiLM)
 ├── utils_swivg.py      # Core SW-IVG algorithm (Numba accelerated)
 ├── utils_dataset.py    # Dataset loader with geometric alignment logic
-├── utils_loss.py       # LDAM Loss implementation
 ├── main_synergy.py     # Main training and evaluation script
-├── precompute_swivg.py # Script for offline topological map generation
 ├── requirements.txt    # Python dependencies
 └── README.md
 ```
@@ -30,8 +28,8 @@ SynergyNet/
 
 1.  **Create a virtual environment** (Recommended):
     ```bash
-    conda create -n synergy python=3.8
-    conda activate synergy
+    conda create -n GraViS-Net python=3.8
+    conda activate GraViS-Net
     ```
 
 2.  **Install dependencies:**
@@ -84,7 +82,7 @@ Train the model using the Deferred Re-balancing (DRW) strategy with LDAM Loss.
 
 ```bash
 python main_synergy.py \
-  --model_name SynergyNet_ISIC \
+  --model_name GraViS-Net_ISIC \
   --base_dir /path/to/dataset \
   --cache_dir ./cache_swivg_2018 \
   --num_classes 7 \
@@ -98,7 +96,7 @@ Fine-tune the model (pre-trained on ISIC 2019) for the small-scale PAD-UFES-20 d
 
 ```bash
 python main_synergy.py \
-  --model_name SynergyNet_PAD \
+  --model_name GraViS-Net_PAD \
   --base_dir /path/to/PAD_dataset \
   --pretrained_path ./checkpoints/isic_2019_best.pth \
   --num_classes 6 \
