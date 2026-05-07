@@ -18,8 +18,7 @@ GraViS-Net is a novel dual-stream framework designed for long-tailed skin lesion
 GraViS-Net/
 ├── checkpoints/        # Directory for saving model weights and logs
 ├── models.py        # GraViS-Net architecture definition (Dual-Stream + FiLM)
-├── utils_swivg.py      # Core AST-IVG algorithm (Numba accelerated)
-├── utils_dataset.py    # Dataset loader with geometric alignment logic
+├── SWIVG.py      # Core AST-IVG algorithm (Numba accelerated)
 ├── main_synergy.py     # Main training and evaluation script
 ├── requirements.txt    # Python dependencies
 └── README.md
