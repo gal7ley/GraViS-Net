@@ -2,11 +2,11 @@
 
 ## 📖 Introduction
 
-GraViS-Net is a novel dual-stream framework designed for long-tailed skin lesion classification. It integrates appearance features (RGB) with topological structural features derived from the **Sigmoid-Weighted Image Visibility Graph (SW-IVG)** to enhance diagnostic accuracy and robustness.
+GraViS-Net is a novel dual-stream framework designed for long-tailed skin lesion classification. It integrates appearance features (RGB) with topological structural features derived from the **Adaptive Soft-Thresholded Image Visibility Graph (AST-IVG)** to enhance diagnostic accuracy and robustness.
 
 **Key Features:**
-*   **Dual-Stream Architecture:** Combines a strong ResNet50 backbone for visual details (RGB) and a lightweight ResNet18 backbone for topological structures (SW-IVG).
-*   **SW-IVG Topology:** Utilizes a novel visibility graph construction method to capture structural patterns that are robust to noise and artifacts.
+*   **Dual-Stream Architecture:** Combines a strong ResNet50 backbone for visual details (RGB) and a lightweight ResNet18 backbone for topological structures (AST-IVG).
+*   **AST-IVG Topology:** Utilizes a novel visibility graph construction method to capture structural patterns that are robust to noise and artifacts.
 *   **Offline Preprocessing:** Implements an O(N^2) visibility graph construction offline using Numba acceleration, converting complex topology calculation into efficient O(1) data loading during training.
 *   **Geometric Alignment:** Ensures strict spatial consistency between RGB images and topological maps during data augmentation using `Albumentations`.
 *   **Metadata Integration:** Incorporates clinical metadata (e.g., age, anatomical site) via a **FiLM Modulator** for enhanced performance on ISIC 2019 and PAD-UFES-20 datasets.
@@ -18,7 +18,7 @@ GraViS-Net is a novel dual-stream framework designed for long-tailed skin lesion
 GraViS-Net/
 ├── checkpoints/        # Directory for saving model weights and logs
 ├── models_v5.py        # GraViS-Net architecture definition (Dual-Stream + FiLM)
-├── utils_swivg.py      # Core SW-IVG algorithm (Numba accelerated)
+├── utils_swivg.py      # Core AST-IVG algorithm (Numba accelerated)
 ├── utils_dataset.py    # Dataset loader with geometric alignment logic
 ├── main_synergy.py     # Main training and evaluation script
 ├── requirements.txt    # Python dependencies
@@ -60,7 +60,7 @@ Please download the datasets from their official sources.
 | ISIC 2019 | 25,331 | 8 | 53.9 | Image + Metadata |
 | PAD-UFES-20 | 2,298 | 6 | 16.3 | Image + Rich Metadata |
 
-### 2. Offline SW-IVG Computation
+### 2. Offline AST-IVG Computation
 To avoid high computational overhead during training, we pre-compute the topological maps and cache them as `.npy` files.
 
 Run the following script to generate the cache:
