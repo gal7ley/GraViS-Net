@@ -1,4 +1,4 @@
-# GraViS-Net: Dual-Stream Network with Topology-Awareness for Skin Lesion Diagnosis
+# GraViS-Net: Graph-Visual Synergy with Adaptive Soft-Thresholding for Skin Lesion Diagnosis
 
 ## 📖 Introduction
 
