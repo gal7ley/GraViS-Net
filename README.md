@@ -66,7 +66,7 @@ Run the following script to generate the cache:
 
 ```bash
 # Example for ISIC 2018
-python precompute_swivg.py \
+python SWIVG.py \
   --data_dir /path/to/ISIC2018_Images \
   --save_dir ./cache_swivg_2018
 ```
